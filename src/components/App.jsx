@@ -1,7 +1,12 @@
 import { useState } from "react";
+import Scoreboard from "./Scoreboard";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Scoreboard></Scoreboard>
+    </>
+  );
 }
 
 export default App;
