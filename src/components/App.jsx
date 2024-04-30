@@ -12,6 +12,9 @@ function App() {
     if (!clickedIds.includes(id)) {
       saveScore(score + 1);
       setClickedIds([...clickedIds, id]);
+      if (score === 8) {
+        alert("You win!");
+      }
     } else {
       if (score > bestScore) {
         saveBest(score);
