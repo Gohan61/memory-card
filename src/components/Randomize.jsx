@@ -1,16 +1,24 @@
 import GetImages from "./Images";
 
-export default function Randomize() {
+export default function Randomize({ click }) {
   const allImages = [
-    <GetImages search={"Michael Scott"} key={"michael"}></GetImages>,
-    <GetImages search={"Toby Flenderson"} key={"toby"}></GetImages>,
-    <GetImages search={"Dwight Schrute"} key={"dwight"}></GetImages>,
-    <GetImages search={"Phyllis Vance"} key={"phyllis"}></GetImages>,
-    <GetImages search={"Ryan Howard"} key={"ryan"}></GetImages>,
-    <GetImages search={"Creed Bratton"} key={"creed"}></GetImages>,
-    <GetImages search={"Stanley Hudson"} key={"stanley"}></GetImages>,
-    <GetImages search={"Angela Martin"} key={"angela"}></GetImages>,
-    <GetImages search={"Oscar Martinez"} key={"oscar"}></GetImages>,
+    // <GetImages
+    //   search={"Michael Scott"}
+    //   key={"michael"}
+    //   click={click}
+    // ></GetImages>,
+    // <GetImages
+    //   search={"Toby Flenderson"}
+    //   key={"toby"}
+    //   click={click}
+    // ></GetImages>,
+    // <GetImages search={"Dwight Schrute"} key={"dwight"} click={click}></GetImages>,
+    // <GetImages search={"Phyllis Vance"} key={"phyllis"} click={click}></GetImages>,
+    // <GetImages search={"Ryan Howard"} key={"ryan"} click={click}></GetImages>,
+    // <GetImages search={"Creed Bratton"} key={"creed"} click={click}></GetImages>,
+    // <GetImages search={"Stanley Hudson"} key={"stanley"} click={click}></GetImages>,
+    // <GetImages search={"Angela Martin"} key={"angela"} click={click}></GetImages>,
+    // <GetImages search={"Oscar Martinez"} key={"oscar"} click={click}></GetImages>,
   ];
 
   function shuffle(allImages) {

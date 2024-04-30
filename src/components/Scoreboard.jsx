@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export default function Scoreboard() {
+export default function Scoreboard({ score }) {
   const bestScore = 0;
-  const [score, saveScore] = useState(0);
+
   return (
     <>
       <p>Best score: {bestScore}</p>

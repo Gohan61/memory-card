@@ -4,7 +4,7 @@ const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
 
 export default function GetImages(props) {
   const [image, setImage] = useState([]);
-  console.log(props);
+  let clicked = false;
 
   useEffect(() => {
     const getImage = () => {
@@ -15,8 +15,6 @@ export default function GetImages(props) {
         },
       )
         .then(function (response) {
-          console.log(response);
-
           return response.json();
         })
         .then(function (response) {
@@ -28,7 +26,7 @@ export default function GetImages(props) {
 
   return (
     <>
-      <img src={image} alt="" />
+      <img src={image} alt="" onClick={props.click} />
     </>
   );
 }

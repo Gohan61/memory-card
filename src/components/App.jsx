@@ -1,13 +1,17 @@
 import { useState } from "react";
-import Scoreboard from "./Scoreboard";
-import GetImages from "./Images";
 import Randomize from "./Randomize";
+import Scoreboard from "./Scoreboard";
 
 function App() {
+  const [score, saveScore] = useState(0);
+
+  function click() {
+    saveScore(score + 1);
+  }
   return (
     <>
-      <Scoreboard></Scoreboard>
-      <Randomize></Randomize>
+      <Randomize click={click}></Randomize>
+      <Scoreboard score={score}></Scoreboard>
     </>
   );
 }
