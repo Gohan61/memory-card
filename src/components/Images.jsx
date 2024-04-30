@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+const API_KEY = "96m3PRbkI5yfUBQLvQ34GbSXYLq19Rw7&s";
 
 export default function GetImages(props) {
   const [image, setImage] = useState([]);
