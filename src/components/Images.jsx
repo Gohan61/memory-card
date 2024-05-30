@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_KEY = "96m3PRbkI5yfUBQLvQ34GbSXYLq19Rw7&s";
+const giphyAPI = import.meta.env.VITE_REACT_APP_API_KEY;
 
 export default function GetImages(props) {
   const [image, setImage] = useState([]);
@@ -8,7 +8,7 @@ export default function GetImages(props) {
   useEffect(() => {
     const getImage = () => {
       fetch(
-        `https://api.giphy.com/v1/gifs/translate?api_key=${API_KEY}=${props.search}`,
+        `https://api.giphy.com/v1/gifs/translate?api_key=${giphyAPI}&s=${props.search}&weirdness=4`,
         {
           mode: "cors",
         },
@@ -17,6 +17,7 @@ export default function GetImages(props) {
           return response.json();
         })
         .then(function (response) {
+          console.log(response);
           setImage(response.data.images.original.url);
         });
     };
